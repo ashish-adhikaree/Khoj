@@ -10,7 +10,6 @@ const SearchBar = () => {
   const handleClick = async (event: any) => {
     event.preventDefault();
     const value = searchValue?.current?.value;
-    console.log(value)
     router.push(`/search?q=${value}`)
   };
   return (

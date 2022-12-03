@@ -1,5 +1,5 @@
 import { BiSearch, BiImage, BiVideo } from "react-icons/bi";
-import { CiLocationOn } from "react-icons/ci";
+import { GoLocation } from "react-icons/go";
 import { FiMoreVertical } from "react-icons/fi";
 
 const HeaderMenuItem = () => {
@@ -17,7 +17,7 @@ const HeaderMenuItem = () => {
         title: "Images",
       },
       {
-        icon: <CiLocationOn />,
+        icon: <GoLocation />,
         title: "Maps",
       },
       {

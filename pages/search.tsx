@@ -5,6 +5,7 @@ import Pagination from "../components/search-page/pagination";
 import SearchHeader from "../components/search-page/searchHeader";
 import { Response } from "../response";
 
+
 const SearchPage = ({searchResult}:{searchResult:any}) => {
   const router = useRouter();
   return (
@@ -12,6 +13,7 @@ const SearchPage = ({searchResult}:{searchResult:any}) => {
       <SearchHeader />
       <div>
         <HeaderMenuItem />
+        <div>
         {searchResult.items.map((item:any, index:number) => {
           return (
             <div key={index} className="m-5 max-w-screen-md md:ml-[12rem]">
@@ -21,15 +23,16 @@ const SearchPage = ({searchResult}:{searchResult:any}) => {
                   router.push(item.link);
                 }}
               >
-                <p className="text-small">{item.formattedUrl}</p>
+                <p className="text-small text-gray-600">{item.formattedUrl}</p>
                 <p className="text-blue-700 text-xl group-hover:underline underline-offset-1">
                   {item.title}
                 </p>
               </div>
-              <p>{item.snippet}</p>
+              <p className="text-gray-800">{item.snippet}</p>
             </div>
           );
         })}
+        </div>
       </div>
       <Pagination/>
     </div>
@@ -39,7 +42,7 @@ const SearchPage = ({searchResult}:{searchResult:any}) => {
 export default SearchPage;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const useDummyData = true;
+  const useDummyData = false;
   const start = context.query.start? context.query.start : 0
   const searchResult = useDummyData
     ? Response

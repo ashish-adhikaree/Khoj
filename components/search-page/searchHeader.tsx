@@ -45,7 +45,7 @@ const SearchHeader = () => {
       </div>
       <Image
         alt="avatar"
-        className="rounded-full cursor-pointer hover:scale-[1.1] mr-5"
+        className="rounded-full cursor-pointer hover:scale-[1.1] mr-5 hidden sm:block"
         src="/avatar.png"
         width={40}
         height={40}
