@@ -13,7 +13,6 @@ const SearchBar = () => {
     console.log(value)
     router.push(`/search?q=${value}`)
   };
-  console.log(searchValue.current);
   return (
     <div className="w-full space-y-10">
       <form className="w-full border max-w-screen-sm flex rounded-full hover:shadow-md focus-within:shadow-md items-center m-auto">
