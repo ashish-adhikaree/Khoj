@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import HeaderMenuItem from "../components/search-page/headerMenus";
 import Pagination from "../components/search-page/pagination";
 import SearchHeader from "../components/search-page/searchHeader";
-import { Response } from "../response";
 
 const SearchPage = ({ searchResult }: { searchResult: any }) => {
   const router = useRouter();
@@ -50,11 +49,8 @@ const SearchPage = ({ searchResult }: { searchResult: any }) => {
 export default SearchPage;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const useDummyData = false;
   const start = context.query.start ? context.query.start : 0;
-  const searchResult = useDummyData
-    ? Response
-    : await fetch(
+  const searchResult =  await fetch(
         `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CX}&q=${context.query.q}&start=${start}`
       )
         .then((res) => {
