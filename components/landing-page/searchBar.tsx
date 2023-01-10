@@ -25,7 +25,7 @@ const SearchBar = () => {
         <button className="hidden" type="submit" onClick={handleClick}></button>
       </form>
       <div className="flex space-x-5 w-full justify-center">
-        <QuickButton onClick={handleClick} value="Google Search" />
+        <QuickButton onClick={handleClick} value="Khoj Search" />
         <QuickButton onClick = {()=>{}} value="I'm feeling lucky" />
       </div>
     </div>
