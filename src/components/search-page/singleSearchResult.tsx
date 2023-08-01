@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { SingleResult } from "../../types";
+import { SingleResult } from "types";
 
 type PROPS  = {
     item: SingleResult

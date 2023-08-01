@@ -7,7 +7,7 @@ import {
   SingleSearchResult,
   SearchHeader,
 } from "@/components";
-import { SingleResult } from "../../types";
+import { SingleResult } from "types";
 
 const SearchPage = ({ searchResult }: { searchResult: any }) => {
   const router = useRouter();
